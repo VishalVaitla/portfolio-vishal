@@ -20,3 +20,150 @@
 @use "commons/components/theme-toggle";
 @use "commons/components/chapter";
 @use "commons/components/card-component";
+
+
+.component {
+  position: relative;
+}
+
+.component section {
+  transition:
+    opacity 0.5s,
+    transform 0.5s;
+}
+
+.component section.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.component section.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.component div {
+  transition:
+    opacity 1s ease-in-out,
+    transform 1s ease-in-out;
+}
+
+.component div.hidden {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.component div.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.typeit-wrapper {
+  display: inline-block; /* Keep text inline for typewriter effect */
+}
+
+/* Keyframes for animations */
+@keyframes enterFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes exitToTop {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* Classes for step transitions */
+.step {
+  position: absolute;
+  width: 100%;
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+}
+
+.step.enter {
+  animation: enterFromBottom 1s forwards;
+}
+
+.step.exit {
+  animation: exitToTop 1s forwards;
+}
+
+/* Typing effect */
+.typing {
+  border-right: 0.1em solid transparent; /* Make cursor transparent */
+  animation: none !important; /* Disable animation */
+}
+
+@keyframes enterFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes exitToTop {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.step {
+  position: absolute;
+  width: 100%;
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+}
+
+.step.enter {
+  animation: enterFromBottom 1s forwards;
+}
+
+.step.exit {
+  animation: exitToTop 1s forwards;
+}
+
+.typing {
+  border-right: 0.1em solid transparent; /* Make cursor transparent */
+  animation: none !important; /* Disable animation */
+}
+
+.checkbox-animation {
+  transition: all 0.3s ease;
+}
+
+.checkbox-animation:checked {
+  animation: checkboxClick 0.3s ease;
+}
+
+@keyframes checkboxClick {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}

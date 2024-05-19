@@ -3,8 +3,6 @@ import { useModal } from "~/contexts/ModalContext";
 import Controls from "./Controls";
 import { DemoProvider } from "./DemoContext";
 import Form from "./Form";
-import LargeWidthCode from "./LargeWidthCode";
-import SmallWidthCode from "./SmallWidthCode";
 
 const Demo = ({ isMaximizable = false, ...props }) => {
   const { modalIsOpen, onCloseModal } = useModal();
@@ -41,9 +39,6 @@ const Demo = ({ isMaximizable = false, ...props }) => {
     <div className={`demo${modalIsOpen ? " is-maximized" : ""}`} {...props}>
       <article className="component" aria-label="Demo">
         <Form />
-        <footer className="code">
-          <pre>{isLargeLayout ? <LargeWidthCode /> : <SmallWidthCode />}</pre>
-        </footer>
         {isMaximizable && <Controls />}
       </article>
     </div>

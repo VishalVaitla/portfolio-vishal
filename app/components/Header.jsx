@@ -28,7 +28,7 @@ export default function Header({
       {...props}
     >
       <div className="container">
-        <Link to="/" aria-label="Pico CSS homepage">
+        <Link to="/" aria-label="Vishal Vaitla - Portfolio">
           <Logo shouldAnimateLogo={true} />
         </Link>
         <Nav shouldDisplayDocsVersion={shouldDisplayDocsVersion} />

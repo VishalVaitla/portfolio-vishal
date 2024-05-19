@@ -1,6 +1,5 @@
-import Minimize from "~/components/icons/Minimize";
 import Maximize from "~/components/icons/Maximize";
-
+import Minimize from "~/components/icons/Minimize";
 import { useModal } from "~/contexts/ModalContext";
 
 export default function Controls(props) {
