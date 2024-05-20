@@ -37,8 +37,9 @@ jobs:
         run: ls -la public/build  # Verify the directory contents
       
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
+          name: build
           path: './public/build'  # Adjust this if necessary
 
   deploy:
@@ -52,7 +53,10 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Download Artifact
-        uses: actions/download-pages-artifact@v3
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: build
       
       - name: Deploy to GitHub Pages
         id: deployment
