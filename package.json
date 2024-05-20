@@ -1,10 +1,7 @@
 {
-  "name": "@picocss/picocss.com",
-  "version": "0.0.1",
-  "author": "Lucas Larroche",
-  "homepage": "https://picocss.com",
-  "private": true,
-  "sideEffects": false,
+  "name": "portfolio-vishal",
+  "version": "1.0.0",
+  "homepage": "https://VishalVaitla.github.io/portfolio-vishal",
   "scripts": {
     "build": "run-s 'build:*' --silent && remix build",
     "build:sort-scss": "postcss --config app/styles/scss ./app/styles/**/*.scss --replace",
@@ -28,14 +25,13 @@
     "start": "wrangler pages dev --ip 0.0.0.0 --compatibility-date=2023-06-21 ./public",
     "wrangler": "wrangler pages dev --ip 0.0.0.0 ./public",
     "pages:deploy": "npm run build && wrangler pages deploy ./public",
-    "prebuild:sort-scss": "echo '[@picocss/picocss.com] ✨ Lint'",
-    "prebuild:build-css": "echo '[@picocss/picocss.com] ✨ Compile'",
-    "prebuild:autoprefix": "echo '[@picocss/picocss.com] ✨ Autoprefix'",
-    "prebuild:minify": "echo '[@picocss/picocss.com] ✨ Minify'",
-    "prebuild:code-snippets": "echo '[@picocss/picocss.com] ✨ Generate code snippets'",
-    "prebuild:fetch-stats": "echo '[@picocss/picocss.com] ✨ Fetch stats'",
-    "prebuild:v1-documentation": "echo '[@picocss/picocss.com] ✨ Build v1 documentation'"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  
+  "private": true,
+  "sideEffects": false,
+
   "dependencies": {
     "@fontsource/figtree": "^5.0.19",
     "@fontsource/fira-code": "^5.0.17",
@@ -46,6 +42,7 @@
     "@remix-run/node": "^2.8.0",
     "@remix-run/react": "^2.8.0",
     "@remix-run/serve": "^2.8.0",
+    "gh-pages": "^6.1.1",
     "html-react-parser": "^5.1.8",
     "isbot": "^5.1.1",
     "miniflare": "^3.20240512.0",
