@@ -1,15 +1,3 @@
-# Pico CSS Documentation
+Vishal Vaitla - Portfolio
 
-Pico CSS uses [Remix](https://remix.run) for its documentation.
-
-To run the project locally, first install the dependencies:
-
-```bash
-yarn
-```
-
-Next, run the development server:
-
-```bash
-yarn dev
-```
+A versatile full stack engineer with 3 years of excellence!
