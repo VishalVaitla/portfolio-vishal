@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Adjust path to match your build output directory
-          path: '../../public/build'
+          path: 'build'
 
   # Deployment job
   deploy:
