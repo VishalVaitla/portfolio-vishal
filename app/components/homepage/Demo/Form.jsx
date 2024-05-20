@@ -4,21 +4,21 @@ import { useEffect, useState } from "react";
 import TypeIt from "typeit-react";
 import { useDemo } from "./DemoContext";
 
-// Demo
 export default function Form(props) {
   const { currentStep, formRef, delay, setCurrentStep } = useDemo();
   const [isEntering, setIsEntering] = useState(true);
 
   const steps = [
-    `<section><h1>Vishal Vaitla - Turning Tech Challenges into High-Performance Solutions</h1></section>`,
-    `<section><label><input type="checkbox" class="checkbox-animation" /> Highlight Backend Skills</label></section>`,
-    `<section><h2>Backend Projects</h2><p>Transformed monolithic servers into cloud-deployable microservices using Java Spring Boot and AWS.</p></section>`,
-    `<section><label><select><option>Explore Frontend Skills</option></select></label></section>`,
-    `<section><h2>Frontend Projects</h2><p>Developed dynamic web applications using React.js and JavaScript.</p></section>`,
+    `<section><input type="text" value="Experience with Large Scale systems?" readonly /></section>`,
+    `<section><label><input type="checkbox" checked /> Experienced with Large Scale systems</label><p>Transformed monolithic servers into 7 cloud-deployable microservices using Java Spring Boot and AWS, reducing server response time by 50%.</p></section>`,
+    `<section><input type="text" value="Proven Experience with Backend Systems?" readonly /></section>`,
+    `<section><label><input type="checkbox" checked /> Proven Experience with Backend Systems</label><p>Implemented service discovery and load balancing using Java Spring Cloud Netflix Eureka and Ribbon, ensuring high availability and load distribution across microservices.</p></section>`,
+    `<section><input type="text" value="Proven Experience with Frontend Systems?" readonly /></section>`,
+    `<section><label><input type="checkbox" checked /> Proven Experience with Frontend Systems</label><p>Developed dynamic web applications using React.js and JavaScript, reducing page load times by 30% through optimization techniques.</p></section>`,
     `<section><h2>Technical Skills</h2><p>Backend: Java, Spring Boot, Microservices, AWS, Docker</p><p>Frontend: React.js, JavaScript, HTML, CSS</p></section>`,
-    `<section><h2>Project Highlights</h2><p>Key projects with descriptions and achievements.</p></section>`,
-    `<section><h2>Awards and Certifications</h2><p>Relevant awards and certifications that underline expertise and commitment to excellence.</p></section>`,
-    `<section><h2>Professional Experience</h2><p>Timeline of key roles and contributions in previous positions.</p></section>`,
+    `<section><h2>Project Highlights</h2><p>Led the development of a high-availability microservices architecture, enhancing system performance and scalability.</p></section>`,
+    `<section><h2>Awards and Certifications</h2><p>Certified Kubernetes Administrator, AWS Certified Solutions Architect, and recognized for outstanding contributions in software engineering.</p></section>`,
+    `<section><h2>Professional Experience</h2><p>Extensive experience in leading teams and driving large-scale projects to successful completion.</p></section>`,
     `<section><h2>Contact Me</h2><p>Explore my resume in detail and reach out for an interview opportunity.</p></section>`,
   ];
 
@@ -41,14 +41,6 @@ export default function Form(props) {
             startDelay: 0,
             cursor: false,
             afterComplete: () => {
-              if (currentStep === 1) {
-                // Simulate checkbox click after the typewriter effect
-                const checkbox = formRef.current.querySelector(".checkbox-animation");
-                if (checkbox) {
-                  checkbox.checked = true;
-                }
-              }
-
               setTimeout(() => {
                 setIsEntering(false);
                 setTimeout(() => {

@@ -14,8 +14,8 @@ export default function Features(props) {
           A&nbsp;Superpowered <mark>HTML&nbsp;Reset</mark>
         </h2>
         <p>
-          With just the right&nbsp;amount of&nbsp;everything, Pico is a great starting&nbsp;point for
-          a&nbsp;clean and&nbsp;lightweight design&nbsp;system.
+          With just the right&nbsp;amount of&nbsp;everything, Pico is a great starting&nbsp;point
+          for a&nbsp;clean and&nbsp;lightweight design&nbsp;system.
         </p>
       </hgroup>
       <div className="grid">
@@ -31,6 +31,7 @@ export default function Features(props) {
         </article>
         <article>
           <Logo displayWordmark={false} />
+          {/* <VideoLogo shouldAnimateLogo={true} /> */}
           <h3>Great Styles with Just CSS</h3>
           <p>
             No extra baggage needed. Pico works seamlessly without dependencies,

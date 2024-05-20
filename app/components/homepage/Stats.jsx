@@ -8,11 +8,11 @@ import { formatStatNumber } from "~/utils";
 
 const Icon = ({ type, ...props }) => {
   switch (type) {
-    case "npmDownloads":
+    case "YearsOfExperience":
       return <Terminal {...props} />;
-    case "githubStars":
+    case "ScaleOfRequestsServedPerDay":
       return <Star {...props} />;
-    case "jsdelivrHits":
+    case "":
       return <ClouDownload {...props} />;
     default:
       return <Download {...props} />;
@@ -43,9 +43,7 @@ export default function Stats(props) {
                   )}
                 </a>
               </p>
-              {labelContainsMonthly && (
-                <p className="period-suffix">(Last month)</p>
-              )}
+              {labelContainsMonthly && <p className="period-suffix">(Last month)</p>}
             </li>
           );
         })}

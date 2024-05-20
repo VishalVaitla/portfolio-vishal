@@ -1,4 +1,4 @@
-import Link from "~/components/Link";
+import Typewriter from "typewriter-effect";
 import Demo from "~/components/homepage/Demo";
 import ArrowRight from "~/components/icons/ArrowRight";
 
@@ -7,37 +7,44 @@ export default function Hero(props) {
     <section className="hero" {...props}>
       <div className="hook">
         <h1 className="hero-title">
-          <mark>Vishal Vaitla</mark> <br />
-          Front-End & Backend Developer with Expertise in Modern Web Technologies
+          <mark>Vishal Vaitla </mark> <br />
+          <br />
+          {/* <h3>Empowering Businesses with 3 Years of Full-Stack Excellence</h3> */}
         </h1>
-        <p className="secondary">
-          Software Engineer with a Master's in Computer Science from San Jose State University.
-        </p>
-        <p className="secondary">Specializing in:</p>
-        <ul className="specialties">
-          <li>Microservices</li>
-          <li>Cloud Deployments</li>
-          <li>Real-Time Data Processing</li>
-        </ul>
-        <p className="secondary">Proven track record of:</p>
-        <ul className="achievements">
-          <li>Optimizing system performance</li>
-          <li>Enhancing user experiences</li>
-        </ul>
-        <p className="secondary">
-          Explore my work, discover my journey, and let's create something amazing together!
-        </p>
+        <div style={{ color: "white", fontSize: "30px", textAlign: "center" }}>
+          <Typewriter
+            options={{
+              strings: [
+                "Empowering Businesses with 3 Years of Full-Stack Excellence",
+                "Harnessing the Power of Microservices, Cloud, and Web Development to Tackle Large-Scale Challenges",
+                "Dive in to Explore!!",
+              ],
+              autoStart: true,
+              loop: true,
+              cursor: "!",
+              deleteSpeed: 0,
+              delay: 50,
+              pauseFor: 2000,
+            }}
+          />
+        </div>
         <div className="grid ctas">
-          <Link to="/docs" role="button" className="cta">
-            Download Resume
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/1LKH7yryzSXJd7USSL_S4E-qUd4QgLoY6/view?usp=sharing"
+            role="button"
+            className="cta contrast"
+          >
+            Resume
             <ArrowRight />
-          </Link>
+          </a>
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/vishal-vaitla"
             role="button"
-            className="cta contrast"
+            className="cta"
           >
             Connect on LinkedIn
             <ArrowRight />

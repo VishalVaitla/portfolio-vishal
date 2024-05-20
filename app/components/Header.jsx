@@ -29,7 +29,7 @@ export default function Header({
     >
       <div className="container">
         <Link to="/" aria-label="Vishal Vaitla - Portfolio">
-          <Logo shouldAnimateLogo={true} />
+          <Logo />
         </Link>
         <Nav shouldDisplayDocsVersion={shouldDisplayDocsVersion} />
       </div>

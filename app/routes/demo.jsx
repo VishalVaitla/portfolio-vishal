@@ -1,5 +1,4 @@
 import Link from "~/components/Link";
-import Logo from "~/components/Logo";
 import Demo from "~/components/homepage/Demo";
 import { useNavigation } from "~/contexts/NavigationContext";
 import metaData from "~/data/meta";
@@ -33,8 +32,7 @@ export default function DemoPage() {
         <section className="hero" style={{ marginTop: "1rem", rowGap: "2rem" }}>
           <div className="hook">
             <h1>
-              <mark>Minimal CSS&nbsp;Framework</mark> <br />
-              for Semantic&nbsp;HTML
+              <mark>Vishal Vaitla - Portfolio</mark> <br />
             </h1>
           </div>
           <Demo style={{ transform: "scale(1.25)", transformOrigin: "top" }} />

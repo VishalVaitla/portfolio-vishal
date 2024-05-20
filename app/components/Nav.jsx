@@ -1,8 +1,6 @@
 import Link from "~/components/Link";
 import Check from "~/components/icons/Check";
 import GitHubIcon from "~/components/icons/GitHub";
-import ThemeToggle from "~/components/icons/ThemeToggle";
-import TwitterIcon from "~/components/icons/XTwitter";
 import { usePage } from "~/contexts/PageContext";
 import metaData from "~/data/meta";
 
@@ -54,39 +52,19 @@ export default function Nav({ shouldDisplayDocsVersion = false, ...props }) {
           </li>
         )}
         <li className="hide-before-sm">
-          <Link to="/examples" className="contrast">
-            Examples
-          </Link>
-        </li>
-        <li {...(shouldDisplayDocsVersion && { className: "hide-before-sm" })}>
-          <Link to="/docs" className="contrast">
-            Docs
+          <Link to="/" className="contrast">
+            Experiences
           </Link>
         </li>
       </ul>
       <ul className="icons">
         <li>
           <Link
-            to="https://github.com/picocss/pico"
+            to="https://github.com/VishalVaitla"
             className="contrast"
             aria-label="GitHub repository"
           >
             <GitHubIcon />
-          </Link>
-        </li>
-        <li>
-          <Link to="https://twitter.com/picocss" className="contrast" aria-label="Twitter">
-            <TwitterIcon />
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="#"
-            className="contrast"
-            onClick={handleSwitchTheme}
-            aria-label={isThemeDark ? "Turn off dark mode" : "Turn on dark mode"}
-          >
-            <ThemeToggle className={isThemeDark ? " moon" : ""} />
           </Link>
         </li>
       </ul>

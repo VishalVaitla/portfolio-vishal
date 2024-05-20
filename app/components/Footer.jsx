@@ -120,6 +120,7 @@ export default forwardRef(function Footer(props, ref) {
       <div className="container">
         <section>
           <Logo displayWordmark={false} />
+          {/* <VideoLogo shouldAnimateLogo={true}/> */}
           <Links data={footerLinks} />
           <BuildInfo />
           <Resources />

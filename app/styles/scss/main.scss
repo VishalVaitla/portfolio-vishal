@@ -21,7 +21,6 @@
 @use "commons/components/chapter";
 @use "commons/components/card-component";
 
-
 .component {
   position: relative;
 }
@@ -33,7 +32,7 @@
 }
 
 .component section.hidden {
-  transform: translateY(-100%);
+  transform: translateY(-70%);
   opacity: 0;
 }
 
@@ -61,47 +60,6 @@
 .typeit-wrapper {
   display: inline-block; /* Keep text inline for typewriter effect */
 }
-
-/* Keyframes for animations */
-@keyframes enterFromBottom {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes exitToTop {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-}
-
-/* Classes for step transitions */
-.step {
-  position: absolute;
-  width: 100%;
-  transition:
-    transform 1s ease,
-    opacity 1s ease;
-}
-
-.step.enter {
-  animation: enterFromBottom 1s forwards;
-}
-
-.step.exit {
-  animation: exitToTop 1s forwards;
-}
-
 /* Typing effect */
 .typing {
   border-right: 0.1em solid transparent; /* Make cursor transparent */
@@ -110,7 +68,7 @@
 
 @keyframes enterFromBottom {
   from {
-    transform: translateY(100%);
+    transform: translateY(50%);
     opacity: 0;
   }
   to {
@@ -125,7 +83,7 @@
     opacity: 1;
   }
   to {
-    transform: translateY(-100%);
+    transform: translateY(-60%);
     opacity: 0;
   }
 }
@@ -133,6 +91,7 @@
 .step {
   position: absolute;
   width: 100%;
+  padding-right: 12%;
   transition:
     transform 1s ease,
     opacity 1s ease;
@@ -143,7 +102,7 @@
 }
 
 .step.exit {
-  animation: exitToTop 1s forwards;
+  animation: exitToTop 0.7s forwards;
 }
 
 .typing {
@@ -165,5 +124,27 @@
   }
   to {
     transform: scale(1.2);
+  }
+}
+
+/* In your main CSS file */
+.typeit-cursor {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  margin-left: 2px;
+  background: white;
+  vertical-align: middle;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
   }
 }

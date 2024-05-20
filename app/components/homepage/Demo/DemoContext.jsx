@@ -10,7 +10,7 @@ export default function DemoProvider({ children }) {
   const formRef = useRef(null);
 
   // Speed and delay
-  const speed = 50; // Adjust speed for better readability
+  const speed = 25; // Adjust speed for better readability
   const stepDelays = [
     3000, // Step 1
     3000, // Step 2
@@ -36,6 +36,7 @@ export default function DemoProvider({ children }) {
     instance.reset();
     instance.go();
   };
+
   return (
     <DemoContext.Provider
       value={{
